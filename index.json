@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "name": "My Plugin Repository",
+  "description": "Example plugin repository from the Valenced plugin template.",
+  "plugins": {
+    "com.example.always-errors": {
+      "name": "Always Errors",
+      "description": "A plugin that always throws errors.",
+      "author": "Your Name <643945264868098049> (https://discord.com \"Website\")",
+      "icon": "CircleErrorIcon",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.always-errors@1.0.0.zip",
+          "sha256": "aaec30836f15911bf55c2c44053374e9d468df2afcc0c81a3d0145ff2f12204a",
+          "size": 595,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.dependent": {
+      "name": "Example Dependent",
+      "description": "Depends on Example Library. Also installs the library.",
+      "author": "Your Name <643945264868098049> (https://discord.com \"Website\")",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.dependent@1.0.0.zip",
+          "sha256": "bdf266f60b57856a4b3018c9763e1ddc15639ccfca1ca898e6970e4114838d76",
+          "size": 636,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            },
+            "com.example.library": {
+              "version": ">=1 <2"
+            }
+          }
+        }
+      }
+    },
+    "com.example.emojis": {
+      "name": "Example Emojis",
+      "description": "Example emoji packs for Valenced.",
+      "author": "Your Name",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.emojis@1.0.0.zip",
+          "sha256": "b3195176d6bafd4d691d0e3777ff437de53988123e9c6ba9686f91cc552531a3",
+          "size": 7328,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            },
+            "valenced.api.themes": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.fonts": {
+      "name": "Example Fonts",
+      "description": "Example font packs for Valenced.",
+      "author": "Your Name",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.fonts@1.0.0.zip",
+          "sha256": "2fdfe20a9eaa30606f8fd1a21dd3b30401b6650d2be5d34683baaab255613a6d",
+          "size": 2424124,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            },
+            "valenced.api.themes": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.icons": {
+      "name": "Example Icons",
+      "description": "Example icon packs for Valenced.",
+      "author": "Your Name",
+      "channels": {
+        "latest": "1.1.0"
+      },
+      "versions": {
+        "1.1.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.icons@1.1.0.zip",
+          "sha256": "4b443c9ad15c5a41746e612c15cc70abc9387de329633efdd3a1cdc8672d5781",
+          "size": 6806,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            },
+            "valenced.api.themes": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.js-plugin": {
+      "name": "JS Plugin",
+      "description": "A JS-only example plugin without any native code.",
+      "author": "Your Name <643945264868098049> (https://discord.com \"Website\")",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.js-plugin@1.0.0.zip",
+          "sha256": "ea0d58776dee395d1a30f5bbf98d778daa95a8cb224ab470fe6195d0a4fba1d5",
+          "size": 607,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.library": {
+      "name": "Example Library",
+      "description": "A plugin other plugins can depend on. See Example Dependent.",
+      "author": "Your Name <643945264868098049> (https://discord.com \"Website\")",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.library@1.0.0.zip",
+          "sha256": "f67417253b8cd3ce708ac2b9a1625cd74b1b1b5e401ce9c5b7fb278f058174f0",
+          "size": 636,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.plugin": {
+      "name": "Example Plugin",
+      "description": "An example Valenced plugin built from the template.",
+      "author": "Your Name <643945264868098049> (https://discord.com \"Website\")",
+      "contributors": [
+        "Someone Else <669627189624307712> (mailto:support@discord.com)",
+        "Some Other Person"
+      ],
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.plugin@1.0.0.zip",
+          "sha256": "ecc953b68449d5182a087fb4cdc5ffd944f9874d9d16a47b8adb2f389b6194c2",
+          "size": 5743,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.example.themes": {
+      "name": "Example Themes",
+      "description": "Example themes for Valenced.",
+      "author": "Your Name",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.example.themes@1.0.0.zip",
+          "sha256": "148b3e9bdd09554a3b2ee9e64b1b57b74cebe9fcf73657b4cc75028ac9e7b5dd",
+          "size": 91229,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            },
+            "valenced.api.themes": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    }
+  }
+}
