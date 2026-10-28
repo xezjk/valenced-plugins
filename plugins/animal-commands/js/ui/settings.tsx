@@ -1,13 +1,12 @@
 import { Design } from '@valenced/discord/design'
 import * as components from '@valenced/components'
-import * as ReactNative from 'react-native'
+import { ScrollView, View, Image, Text } from 'react-native'
 
 export default function SettingsComponent({ api }) {
-    const { TableRowGroup, TableSwitchRow } = Design
+    const { TableRowGroup, TableSwitchRow, Card } = Design
     const settings = api.jsonStorage.use()
     const { Page } = components
-	const { ScrollView, View } = ReactNative
-    const { finders } = revenge.modules;
+    const { finders } = valenced.modules;
     const userModule = finders.lookupModule(finders.filters.withProps("getCurrentUser"));
 
     const currentUser = userModule?.getCurrentUser?.() || Object.values(userModule || {}).find(store => typeof store?.getCurrentUser === "function")?.getCurrentUser();
@@ -16,20 +15,16 @@ export default function SettingsComponent({ api }) {
     return (
         <Page>
             <ScrollView>
-                <Card variant="secondary" border="none">
-                    <Image source = {{ uri: avatarUrl }} />
-                </Card>
-                <Text>Hello</Text>
-                <TableRowGroup>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 50 }}>
+                    <Image source={{ uri: avatarUrl }} style={{ width: 92, height: 92, borderRadius: 22, borderWidth: 2, borderColor: '#000000' }} />
+                    <View style={{ flex: 1 }}>
+                        <Text>Commands</Text>
+                        <Text>Cool animals images with slash commands</Text>
+                    </View>
+                </View>
+                <TableRowGroup title="Animals">
                     <TableSwitchRow
                         label="Enable /dog command"
-                        value={settings?.enabled ?? true}
-                        onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
-                        }
-                    />
-                    <TableSwitchRow
-                        label="Enable /cat command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
                             api.jsonStorage.set({ enabled })
