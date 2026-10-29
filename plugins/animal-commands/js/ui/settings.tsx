@@ -37,91 +37,91 @@ export default function SettingsComponent({ api }) {
                 <TableRowGroup title="Animals">
                     <TableSwitchRow
                         label="Enable /dog command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('dog', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /cat command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('cat', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /fox command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('fox', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /duck command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('duck', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /shiba command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('shiba', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /horse command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('horse', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /otter command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('otter', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /bird command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('bird', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /turtle command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('turtle', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /sheep command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('sheep', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /capybara command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('capybara', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /bunny command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('bunny', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /hamster command"
-                        value={settings?.enabled ?? true}
+                        value={true}
                         onValueChange={(enabled: boolean) =>
                             setDisabledAnimal('hamster', !enabled)
                         }
