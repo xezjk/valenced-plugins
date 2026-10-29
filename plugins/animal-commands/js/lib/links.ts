@@ -1,17 +1,21 @@
+
 import { commands } from './commands'
 import { getModules } from '@valenced/modules/finders'
 import { withProps } from '@valenced/modules/finders/filters'
 
-let registered: {
+type Animal = {
     name: string
-    command: ReturnType<typeof commands.registerCommand>
-}[] = []
+    definition: Parameters<typeof commands.registerCommand>[0]
+    unregister?: () => void
+}
+
+let registered: Animal[] = []
 
 export function registerAnimals(): void {
-    registered = [
+    const definitions: Animal[] = [
         {
             name: 'dog',
-            command: commands.registerCommand({
+            definition: {
                 name: 'dog',
                 description: 'Get a random dog picture.',
                 async execute(args, context) {
@@ -39,11 +43,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link!)
                     })
                 }
-            })
+            }
         },
         {
             name: 'cat',
-            command: commands.registerCommand({
+            definition: {
                 name: 'cat',
                 description: 'Get a random cat picture.',
                 async execute(args, context) {
@@ -71,11 +75,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link!)
                     })
                 }
-            })
+            }
         },
         {
             name: 'fox',
-            command: commands.registerCommand({
+            definition: {
                 name: 'fox',
                 description: 'Get a random fox picture.',
                 async execute(args, context) {
@@ -103,11 +107,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link!)
                     })
                 }
-            })
+            }
         },
         {
             name: 'duck',
-            command: commands.registerCommand({
+            definition: {
                 name: 'duck',
                 description: 'Get a random duck picture.',
                 async execute(args, context) {
@@ -135,11 +139,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link!)
                     })
                 }
-            })
+            }
         },
         {
             name: 'shiba',
-            command: commands.registerCommand({
+            definition: {
                 name: 'shiba',
                 description: 'Get a random Shiba Inu picture.',
                 async execute(args, context) {
@@ -160,11 +164,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'horse',
-            command: commands.registerCommand({
+            definition: {
                 name: 'horse',
                 description: 'Get a random horse picture.',
                 async execute(args, context) {
@@ -185,11 +189,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'deer',
-            command: commands.registerCommand({
+            definition: {
                 name: 'deer',
                 description: 'Get a random deer picture.',
                 async execute(args, context) {
@@ -210,11 +214,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'otter',
-            command: commands.registerCommand({
+            definition: {
                 name: 'otter',
                 description: 'Get a random otter picture.',
                 async execute(args, context) {
@@ -235,11 +239,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'bird',
-            command: commands.registerCommand({
+            definition: {
                 name: 'bird',
                 description: 'Get a random bird picture.',
                 async execute(args, context) {
@@ -260,11 +264,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'turtle',
-            command: commands.registerCommand({
+            definition: {
                 name: 'turtle',
                 description: 'Get a random turtle picture.',
                 async execute(args, context) {
@@ -285,11 +289,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'sheep',
-            command: commands.registerCommand({
+            definition: {
                 name: 'sheep',
                 description: 'Get a random sheep picture.',
                 async execute(args, context) {
@@ -310,11 +314,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'capybara',
-            command: commands.registerCommand({
+            definition: {
                 name: 'capybara',
                 description: 'Get a random capybara picture.',
                 async execute(args, context) {
@@ -342,11 +346,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link!)
                     })
                 }
-            })
+            }
         },
         {
             name: 'bunny',
-            command: commands.registerCommand({
+            definition: {
                 name: 'bunny',
                 description: 'Get a random bunny picture.',
                 async execute(args, context) {
@@ -367,11 +371,11 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         },
         {
             name: 'hamster',
-            command: commands.registerCommand({
+            definition: {
                 name: 'hamster',
                 description: 'Get a random hamster picture.',
                 async execute(args, context) {
@@ -392,19 +396,29 @@ export function registerAnimals(): void {
                         inputs.getBestActiveInputForChannelId(channelId)?.insertText(link)
                     })
                 }
-            })
+            }
         }
     ]
+
+    registered = definitions.map(animal => ({
+        ...animal,
+        unregister: commands.registerCommand(animal.definition)
+    }))
 }
 
 export function unregisterAnimals(): void {
-    registered.forEach(c => c.command.unregister())
+    registered.forEach(animal => animal.unregister?.())
     registered = []
 }
 
-export function setDisabledAnimal(name: string, state: boolean): void {
-    const command = registered.find(c => c.name === name)?.command
+export function setDisabledAnimal(name: string, disabled: boolean): void {
+    const animal = registered.find(animal => animal.name === name)
+    if (!animal) return
 
-    if (state) command?.disable()
-    else command?.enable()
+    if (disabled) {
+        animal.unregister?.()
+        animal.unregister = undefined
+    } else if (!animal.unregister) {
+        animal.unregister = commands.registerCommand(animal.definition)
+    }
 }

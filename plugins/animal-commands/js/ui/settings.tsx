@@ -85,6 +85,14 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
+                        label="Enable /deer command"
+                        value={settings?.enabled_deer ?? true}
+                        onValueChange={(enabled: boolean) => {
+                            setDisabledAnimal('deer', !enabled)
+                            api.jsonStorage.set({ enabled_deer: enabled })
+                        }}
+                    />
+                    <TableSwitchRow
                         label="Enable /otter command"
                         value={settings?.enabled_otter ?? true}
                         onValueChange={(enabled: boolean) => {

@@ -11,6 +11,7 @@ interface Settings {
     enabled_shiba: boolean
     enabled_horse: boolean
     enabled_otter: boolean
+    enabled_deer: boolean
     enabled_bird: boolean
     enabled_turtle: boolean
     enabled_sheep: boolean
@@ -30,6 +31,7 @@ export default plugin<{ jsonStorage: Settings }>({
                 enabled_duck: true,
                 enabled_shiba: true,
                 enabled_horse: true,
+                enabled_deer: true,
                 enabled_otter: true,
                 enabled_bird: true,
                 enabled_turtle: true,
