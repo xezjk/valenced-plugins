@@ -126,7 +126,7 @@ export default function SettingsComponent({ api }) {
                     />
                     <TableSwitchRow
                         label="Enable /bunny command"
-                        value={truesettings?.enabled_bunny ?? true}
+                        value={settings?.enabled_bunny ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('bunny', !enabled)
                             api.jsonStorage.set({ enabled_bunny: enabled })
