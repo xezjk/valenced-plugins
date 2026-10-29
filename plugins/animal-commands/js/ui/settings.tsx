@@ -2,10 +2,10 @@ import React, { useMemo } from 'react'
 import { Design } from '@valenced/discord/design'
 import * as components from '@valenced/components'
 import { ScrollView, View, Image, Text, useColorScheme } from 'react-native'
+import { setDisabledAnimal } from './../lib/links.ts'
 
 export default function SettingsComponent({ api }) {
     const { TableRowGroup, TableSwitchRow, Card } = Design
-    const settings = api.jsonStorage.use()
     const { Page } = components
     const { finders } = valenced.modules;
     const userModule = finders.lookupModule(finders.filters.withProps("getCurrentUser"));
@@ -39,84 +39,91 @@ export default function SettingsComponent({ api }) {
                         label="Enable /dog command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('dog', !enabled)
+                        }
+                    />
+                    <TableSwitchRow
+                        label="Enable /cat command"
+                        value={settings?.enabled ?? true}
+                        onValueChange={(enabled: boolean) =>
+                            setDisabledAnimal('cat', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /fox command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('fox', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /duck command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('duck', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /shiba command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('shiba', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /horse command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('horse', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /otter command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('otter', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /bird command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('bird', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /turtle command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('turtle', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /sheep command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('sheep', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /capybara command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('capybara', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /bunny command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('bunny', !enabled)
                         }
                     />
                     <TableSwitchRow
                         label="Enable /hamster command"
                         value={settings?.enabled ?? true}
                         onValueChange={(enabled: boolean) =>
-                            api.jsonStorage.set({ enabled })
+                            setDisabledAnimal('hamster', !enabled)
                         }
                     />
                 </TableRowGroup>

@@ -7,12 +7,8 @@ interface Settings {
     enabled: boolean,
 }
 
-export default plugin<{ jsonStorage: Settings }>({
-    jsonStorage: {
-        load: true,
-        default: {enabled: true},
-    },
-	start({ jsonStorage }) {
+export default plugin ({
+	start() {
 		registerAnimals()
 	},
     stop() {

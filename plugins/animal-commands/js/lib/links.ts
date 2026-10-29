@@ -531,3 +531,11 @@ export function unregisterAnimals(): () => void {
     registered.forEach(fn => fn())
     registered = []
 }
+
+export function setDisabledAnimal(name, state): () => void {
+    if (state) {
+        registered.find(c => c.name === 'dog')?.command.disable()
+    } else {
+        registered.find(c => c.name === 'dog')?.command.enable()
+    }
+}
