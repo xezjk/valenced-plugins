@@ -39,7 +39,7 @@ export default plugin<{ jsonStorage: Settings }>({
                 enabled_hamster: true
             }
         }
-    }
+    },
 	start({ jsonStorage }) {
 		registerAnimals()
 	},
