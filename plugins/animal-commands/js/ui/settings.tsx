@@ -40,7 +40,7 @@ export default function SettingsComponent({ api }) {
                         label="Enable /dog command"
                         value={settings?.enabled_dog ?? true}
                         onValueChange={(enabled: boolean) =>
-                            setDisabledAnimal('dog', !enabled
+                            setDisabledAnimal('dog', !enabled)
                             api.jsonStorage.set({ enabled_dog: enabled })
                         }
                     />
