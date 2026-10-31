@@ -21,8 +21,23 @@ function addAnimal(an_name: string, api1: string, api2?: string, alt_des_name?: 
                 description: 'Get a random ' + (alt_des_name ?? an_name) + ' picture.',
                 async execute(args, context) {
                     const channelId = context?.channel?.id
-                    if (!channelId) return
-
+                    if (!channelId) {
+                        ToastActionCreators.open(
+                            "ChannelError", {
+                                text: "DISCORD ERROR: Couldn't get current open channel.",
+                                variant: 'critical'
+                            }
+                        )
+                        return
+                    }
+                    
+                    ToastActionCreators.open(
+                        "GettingToast", {
+                            text: "Getting a random image.",
+                            variant: 'default'
+                        }
+                    )
+                    
                     let response = await fetch(api1)
                     let data = await response.json()
                     let link: string | undefined
@@ -33,10 +48,31 @@ function addAnimal(an_name: string, api1: string, api2?: string, alt_des_name?: 
                         response = await fetch(api2)
                         data = await response.json()
                         if (data.message || data[0]?.url || data.image || data.url || data.data.url || data.loc) link = data.message || data[0]?.url || data.image || data.url || data.data.url || data.loc
-                        else return
+                        else {
+                            ToastActionCreators.open(
+                                "ApiError1", {
+                                    text: "API ERROR: Couldn't get a response from the API.",
+                                    variant: 'critical'
+                                }
+                            )
+                            return
+                        }
                     } else {
+                        ToastActionCreators.open(
+                            "ApiError2", {
+                                text: "API ERROR: Couldn't get a response from the API.",
+                                variant: 'critical'
+                            }
+                        )
                         return
                     }
+                    
+                    ToastActionCreators.open(
+                        "SuccessToast", {
+                            text: "Successfully received a random image!",
+                            variant: 'success'
+                        }
+                    )
 
                     interface ChatInputs {
                         getBestActiveInputForChannelId(channelId: string): { insertText(text: string): void } | undefined

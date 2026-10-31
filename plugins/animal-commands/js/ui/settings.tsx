@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { Design } from '@valenced/discord/design'
 import * as components from '@valenced/components'
+import TableRowAssetIcon from '@valenced/components/TableRowAssetIcon'
 import { ScrollView, View, Image, Text, useColorScheme } from 'react-native'
 import { setDisabledAnimal } from './../lib/links.ts'
 
@@ -35,9 +36,10 @@ export default function SettingsComponent({ api }) {
                         <Text style={{ color: colors.muted, fontSize: 14, lineHeight: 20 }}>Cool animals images with slash commands</Text>
                     </View>
                 </View>
-                <TableRowGroup title="Animals">
+                <TableRowGroup title="ANIMALS" hasIcons>
                     <TableSwitchRow
-                        label="Enable /dog command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /dog"
                         value={settings?.enabled_dog ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('dog', !enabled)
@@ -45,7 +47,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /cat command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /cat"
                         value={settings?.enabled_cat ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('cat', !enabled)
@@ -53,7 +56,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /fox command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /fox"
                         value={settings?.enabled_fox ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('fox', !enabled)
@@ -61,7 +65,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /duck command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /duck"
                         value={settings?.enabled_duck ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('duck', !enabled)
@@ -69,7 +74,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /shiba command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /shiba"
                         value={settings?.enabled_shiba ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('shiba', !enabled)
@@ -77,7 +83,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /horse command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /horse"
                         value={settings?.enabled_horse ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('horse', !enabled)
@@ -85,7 +92,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /deer command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /deer"
                         value={settings?.enabled_deer ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('deer', !enabled)
@@ -93,7 +101,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /otter command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /otter"
                         value={settings?.enabled_otter ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('otter', !enabled)
@@ -101,7 +110,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /bird command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /bird"
                         value={settings?.enabled_bird ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('bird', !enabled)
@@ -109,7 +119,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /turtle command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /turtle"
                         value={settings?.enabled_turtle ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('turtle', !enabled)
@@ -117,7 +128,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /sheep command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /sheep"
                         value={settings?.enabled_sheep ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('sheep', !enabled)
@@ -125,7 +137,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /capybara command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /capybara"
                         value={settings?.enabled_capybara ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('capybara', !enabled)
@@ -133,7 +146,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /bunny command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /bunny"
                         value={settings?.enabled_bunny ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('bunny', !enabled)
@@ -141,7 +155,8 @@ export default function SettingsComponent({ api }) {
                         }}
                     />
                     <TableSwitchRow
-                        label="Enable /hamster command"
+                        icon={<TableRowAssetIcon name="ic_image" />}
+                        label="Enable /hamster"
                         value={settings?.enabled_hamster ?? true}
                         onValueChange={(enabled: boolean) => {
                             setDisabledAnimal('hamster', !enabled)
