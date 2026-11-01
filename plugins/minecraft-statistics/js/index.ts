@@ -14,5 +14,11 @@ export default plugin<{ jsonStorage: Settings }>({
             }
         }
     },
+    start({ jsonStorage }) {
+        console.log("start")
+    },
+    stop() {
+        console.log("stop")
+    },
     SettingsComponent
 })
