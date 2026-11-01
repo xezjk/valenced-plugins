@@ -1,11 +1,18 @@
-import { ping } from './response.ts'
+import { ping } from './response'
+import SettingsComponent from './settings'
 
-export default plugin ({
-    async start() {
-        const response = await ping('play.cubecraft.net')
-        console.log(response)
+interface Settings {
+    IP: string
+}
+
+export default plugin<{ jsonStorage: Settings }>({
+    jsonStorage() {
+        return {
+            load: true,
+            default: {
+                IP: ''
+            }
+        }
     },
-    stop() {
-        console.log('stop')
-    }
+    SettingsComponent
 })
