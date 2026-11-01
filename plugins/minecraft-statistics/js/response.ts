@@ -1,4 +1,4 @@
-export async function ping(
+export function ping(
     p_host: string,
     p_port?: number,
     p_timeout?: number,
@@ -6,7 +6,7 @@ export async function ping(
 ) {
     const address = p_port ? `${p_host}:${p_port}` : p_host
 
-    const response = await fetch(
+    return fetch(
         `https://api.mcsrvstat.us/3/${encodeURIComponent(address)}`,
         {
             headers: {
@@ -14,9 +14,8 @@ export async function ping(
             },
             signal: AbortSignal.timeout(p_timeout ?? 10000)
         }
-    )
-
-    if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
-    return response.json()
+    ).then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`)
+        return response.json()
+    })
 }

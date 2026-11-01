@@ -1,8 +1,9 @@
 import { ping } from './response.ts'
 
 export default plugin ({
-    start() {
-        console.log(ping('mc.hypixel.net'))
+    async start() {
+        const response = await ping('play.cubecraft.net')
+        console.log(response)
     },
     stop() {
         console.log('stop')
