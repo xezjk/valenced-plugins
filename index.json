@@ -156,6 +156,30 @@
           }
         }
       }
+    },
+    "com.xezjk.minecraft-statistics": {
+      "name": "Minecraft Statistics",
+      "description": "Adds multiple a section to check servers statistics.",
+      "author": "Xezjk <985520795126206464>",
+      "icon": "ic_category_16px",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.0.zip",
+          "sha256": "78d87bf1489057ac706c17eb775fdb27cfe5f7b0ac2edb3fdc6bccfee5d9f8dd",
+          "size": 790,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
     }
   }
 }
