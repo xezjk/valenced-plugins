@@ -1,9 +1,0 @@
-{
-  "name": "@minecraft/minecraftstatuspinger",
-  "version": "1.2.2",
-  "exports": "./src/index.ts",
-  "compilerOptions": {
-    "strictNullChecks": false
-  },
-  "license": "GPL-3.0-or-later"
-}
