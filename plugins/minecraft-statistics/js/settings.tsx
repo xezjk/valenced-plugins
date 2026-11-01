@@ -8,7 +8,10 @@ export default function SettingsComponent({ api }) {
     const { TableRowGroup, TableSwitchRow, Card, TextInput } = Design
     const { Page, Button } = components
 
-    const [ip, setIp] = useState(api.jsonStorage.use().IP)
+    const settings = api.jsonStorage.use()
+    console.log('Storage:', settings)
+
+    const [ip, setIp] = useState(settings?.IP ?? '')
     const [loading, setLoading] = useState(false)
 
     async function handlePing() {
