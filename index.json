@@ -176,7 +176,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "ic_category_16px",
       "channels": {
-        "latest": "1.0.4"
+        "latest": "1.0.5"
       },
       "versions": {
         "1.0.0": {
@@ -234,6 +234,19 @@
         "1.0.4": {
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.4.zip",
           "sha256": "f71f47688a13771049491ff34219e16f926b51030b5f75b573fe2c87da9b8219",
+          "size": 1190,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.5": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.5.zip",
+          "sha256": "3d422b7ce2773dc7e4356094908dc81c7ba88ebd8a6cf6da19f5af2bca7ab831",
           "size": 1190,
           "dependencies": {
             "valenced.api": {
