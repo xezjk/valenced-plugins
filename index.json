@@ -6,10 +6,10 @@
     "com.xezjk.animal-commands": {
       "name": "Animal Commands",
       "description": "Adds multiple animals random images commands",
-      "author": "Xezjk <985520795126206464> (https://discord.com \"Website\")",
+      "author": "Xezjk <985520795126206464>",
       "icon": "BlueskyNeutralIcon",
       "channels": {
-        "latest": "1.1.4"
+        "latest": "1.1.5"
       },
       "versions": {
         "1.0.0": {
@@ -154,6 +154,19 @@
               "version": "*"
             }
           }
+        },
+        "1.1.5": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.5.zip",
+          "sha256": "2addf84638306776a752222333c29f5a288b36379055bd6ed048b622c7fd24c5",
+          "size": 4566,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
         }
       }
     },
@@ -163,13 +176,26 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "ic_category_16px",
       "channels": {
-        "latest": "1.0.0"
+        "latest": "1.0.1"
       },
       "versions": {
         "1.0.0": {
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.0.zip",
           "sha256": "78d87bf1489057ac706c17eb775fdb27cfe5f7b0ac2edb3fdc6bccfee5d9f8dd",
           "size": 790,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.1": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.1.zip",
+          "sha256": "73c595c63a06f7a221a30c3ddc7e5c36c7b83ead77b4b9294b450d51b3ffebfa",
+          "size": 799,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
