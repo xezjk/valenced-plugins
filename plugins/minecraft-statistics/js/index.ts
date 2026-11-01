@@ -7,7 +7,7 @@ export default plugin ({
             port: 25565,
             timeout: 10000,
             ping: true,
-            protocolVersion: 769
+            protocolVersion: 769,
             throwOnParseError: false,
             SRVLookup: true,
             JSONParse: true
