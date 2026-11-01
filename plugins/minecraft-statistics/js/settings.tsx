@@ -5,8 +5,8 @@ import { ScrollView } from 'react-native'
 import { ping } from './response'
 
 export default function SettingsComponent({ api }) {
-    const { TableRowGroup, TableSwitchRow, Card, TextInput } = Design
-    const { Page, Button } = components
+    const { TableRowGroup, TableSwitchRow, Card, TextInput, Button } = Design
+    const { Page } = components
 
     const settings = api.jsonStorage.use()
     console.log('Storage:', settings)
