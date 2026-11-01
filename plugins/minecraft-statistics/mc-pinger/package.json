@@ -1,0 +1,45 @@
+{
+  "name": "minecraftstatuspinger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woodendoors7/MinecraftStatusPinger.git"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "version": "1.2.2",
+  "description": "A modern library for pinging Minecraft servers and getting their status and playerlist, written in TypeScript with zero dependencies.",
+  "keywords": [
+    "minecraft status",
+    "minecraft ping",
+    "minecraft server",
+    "motd",
+    "minecraft"
+  ],
+  "author": "woodendoors_7",
+  "homepage": "https://pinger.floppa.hair/",
+  "bugs": {
+    "url": "https://github.com/woodendoors7/MinecraftStatusPinger/issues"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build:cjs": "tsc --module CommonJS --outDir ./dist/cjs",
+    "build:esm": "tsc --module ESNext --outDir ./dist/esm",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/express": "^4.17.16",
+    "@types/node": "^18.11.18",
+    "@types/varint": "^6.0.1",
+    "typedoc": "^0.23.25",
+    "typescript": "^5.8.2"
+  }
+}

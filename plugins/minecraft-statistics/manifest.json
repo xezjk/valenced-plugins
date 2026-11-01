@@ -1,0 +1,20 @@
+{
+	"format": 1,
+	"id": "com.xezjk.minecraft-statistics",
+	"name": "Minecraft Statistics",
+	"description": "Adds multiple a section to check servers statistics.",
+	"author": "Xezjk <985520795126206464>",
+	"icon": "ic_category_16px", 
+    "version": "1.0.0",
+	"dependencies": {
+		"valenced.api": {
+			"version": ">=1 <2"
+		},
+		"discord": {
+			"version": "*"
+		}
+	},
+	"dist": {
+		"script": "index.js"
+	}
+}
