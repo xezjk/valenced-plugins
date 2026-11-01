@@ -11,7 +11,7 @@ export default plugin ({
             throwOnParseError: false,
             SRVLookup: true,
             JSONParse: true
-        })
+        }),
         
         console.log(result)
     },
