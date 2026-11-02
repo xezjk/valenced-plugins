@@ -49,14 +49,14 @@ export default function SettingsComponent({ api }) {
             <ScrollView>
                 <Pressable
                     onPress={() => connect()}
-                    style={(
+                    style={{
                         backgroundColor: colors.button,
                         borderRadius: 12,
                         padding: 12,
                         flexDirection: 'row',
                         alignItems: 'center',
                         gap: 8
-                    )}
+                    }}
                 >
                     <Text>Add server</Text>
                 </Pressable>
