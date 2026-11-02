@@ -18,8 +18,8 @@ import android.text.Spanned
 import android.text.style.ReplacementSpan
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XposedBridge
-import io.github.revenge.plugins.plugin
-import io.github.revenge.xposed.api.registerNativeMethod
+import io.github.valenced.plugins.plugin
+import io.github.valenced.xposed.api.registerNativeMethod
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.ArrayDeque
 import java.util.WeakHashMap
