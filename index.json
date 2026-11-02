@@ -258,6 +258,30 @@
           }
         }
       }
+    },
+    "com.xezjk.system-emojis": {
+      "name": "System Emojis",
+      "description": "System Emojis in messages, the emoji picker and native reaction pills.",
+      "author": "Xezjk <985520795126206464>",
+      "icon": "EmojiColdFaceIcon",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.system-emojis@1.0.0.zip",
+          "sha256": "94f523a8cefee43172b2642c93fd9d5bd014f8249565844377acceb55af18499",
+          "size": 19673,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
     }
   }
 }
