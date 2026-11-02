@@ -2,7 +2,8 @@ import { ping } from './response'
 import SettingsComponent from './settings'
 
 interface Settings {
-    IP: string
+    IP: string,
+    PORT: number
 }
 
 export default plugin<{ jsonStorage: Settings }>({
@@ -10,7 +11,8 @@ export default plugin<{ jsonStorage: Settings }>({
         return {
             load: true,
             default: {
-                IP: ''
+                IP: '',
+                PORT: '0'
             }
         }
     },
