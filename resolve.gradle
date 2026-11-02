@@ -1,0 +1,10 @@
+gradle.projectsEvaluated {
+    def p = gradle.rootProject.project(":plugins:system-emojis")
+    p.tasks.register("downloadApiArtifacts") {
+        doLast {
+            p.configurations.getByName("releaseCompileClasspath").resolve().each {
+                println it
+            }
+        }
+    }
+}
