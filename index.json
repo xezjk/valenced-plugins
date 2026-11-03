@@ -9,7 +9,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "BlueskyNeutralIcon",
       "channels": {
-        "latest": "1.1.5.1"
+        "latest": "1.1.5.2"
       },
       "versions": {
         "1.0.0": {
@@ -168,123 +168,23 @@
             }
           }
         },
+        "1.1.5.2": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.5.2.zip",
+          "sha256": "2fd51fce9dcc386fbd5f4281f05d10389e300d0aa334a7516a5c03502f634359",
+          "size": 4567,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
         "1.1.5": {
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.5.zip",
           "sha256": "2addf84638306776a752222333c29f5a288b36379055bd6ed048b622c7fd24c5",
           "size": 4566,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        }
-      }
-    },
-    "com.xezjk.minecraft-statistics": {
-      "name": "Minecraft Statistics",
-      "description": "Adds multiple a section to check servers statistics.",
-      "author": "Xezjk <985520795126206464>",
-      "icon": "ic_category_16px",
-      "channels": {
-        "latest": "1.0.5"
-      },
-      "versions": {
-        "1.0.0": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.0.zip",
-          "sha256": "78d87bf1489057ac706c17eb775fdb27cfe5f7b0ac2edb3fdc6bccfee5d9f8dd",
-          "size": 790,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        },
-        "1.0.1": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.1.zip",
-          "sha256": "73c595c63a06f7a221a30c3ddc7e5c36c7b83ead77b4b9294b450d51b3ffebfa",
-          "size": 799,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        },
-        "1.0.2": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.2.zip",
-          "sha256": "9f117b52eb6fdae8bf4f5bfb6225f06d92452037c9e84b42d60cb44282647686",
-          "size": 1150,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        },
-        "1.0.3": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.3.zip",
-          "sha256": "3dbeaa0a898261c0a2aac89f46024b99a5cbed58697a969320d66ae777cf51c3",
-          "size": 1174,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        },
-        "1.0.4": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.4.zip",
-          "sha256": "f71f47688a13771049491ff34219e16f926b51030b5f75b573fe2c87da9b8219",
-          "size": 1190,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        },
-        "1.0.5": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.minecraft-statistics@1.0.5.zip",
-          "sha256": "3d422b7ce2773dc7e4356094908dc81c7ba88ebd8a6cf6da19f5af2bca7ab831",
-          "size": 1190,
-          "dependencies": {
-            "valenced.api": {
-              "version": ">=1 <2"
-            },
-            "discord": {
-              "version": "*"
-            }
-          }
-        }
-      }
-    },
-    "com.xezjk.system-emojis": {
-      "name": "System Emojis",
-      "description": "System Emojis in messages, the emoji picker and native reaction pills.",
-      "author": "Xezjk <985520795126206464>",
-      "icon": "EmojiColdFaceIcon",
-      "channels": {
-        "latest": "1.0.0"
-      },
-      "versions": {
-        "1.0.0": {
-          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.system-emojis@1.0.0.zip",
-          "sha256": "94f523a8cefee43172b2642c93fd9d5bd014f8249565844377acceb55af18499",
-          "size": 19673,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
