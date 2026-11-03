@@ -9,7 +9,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "BlueskyNeutralIcon",
       "channels": {
-        "latest": "1.1.5"
+        "latest": "1.1.5.1"
       },
       "versions": {
         "1.0.0": {
@@ -146,6 +146,19 @@
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.4.zip",
           "sha256": "8f75789e220766b7a53caa2abc087423e0bb48087f3c8daffb388bbc73e933fd",
           "size": 4591,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.1.5.1": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.5.1.zip",
+          "sha256": "78c741ce232b9b372246ebe7e625e37659ec2e9d7983513423755d79ee1e2746",
+          "size": 4567,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
