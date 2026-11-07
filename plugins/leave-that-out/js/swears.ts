@@ -6,6 +6,5 @@ export default {
     cock: "c*ck",
     bitch: "b*tch",
     cunt: "c*nt",
-    slut: "sl*t",
-    
+    slut: "sl*t"
 };
