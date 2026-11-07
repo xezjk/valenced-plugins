@@ -1,29 +1,11 @@
-const dictionary: Record<string, string> = {
-    fuck: "f*ck",
-    shit: "sh*t",
-    nigger: "n**ger",
-    dick: "d*ck",
-    cock: "c*ck",
-    bitch: "b*tch",
-    cunt: "c*nt",
-    slut: "sl*t"
-};
+import swears from './swears'
 
 export default function censor(content: string): string {
-    for (const key in dictionary) {
-        content = content.replace(new RegExp(key, "gi"), match => {
-            const replacement = dictionary[key];
-
-            if (match === match.toUpperCase()) {
-                return replacement.toUpperCase();
-            }
-
-            if (match[0] === match[0].toUpperCase()) {
-                return replacement[0].toUpperCase() + replacement.slice(1);
-            }
-
-            return replacement;
-        });
-    }
-    return content;
+    content = content.replace(new RegExp(key, "gi"), match =>
+        [...swears[key]].map((char, i) =>
+            match[i] === match[i]?.toUpperCase() && match[i] !== match[i]?.toLowerCase()
+            ? char.toUpperCase()
+            : char
+        ).join("")
+    );
 }
