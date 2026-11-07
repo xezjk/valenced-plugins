@@ -206,7 +206,6 @@ export default {
     handjob: "h\\*ndj\\*b",
     heeb: "h\\*\\*b",
     hell: "h\\*ll",
-    ho: "h\\*",
     hoe: "h\\*e",
     homo: "h\\*mo",
     homodumbshit: "h\\*mod\\*mbsh\\*t",
