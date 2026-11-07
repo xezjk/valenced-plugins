@@ -9,7 +9,7 @@ const dictionary: Record<string, string> = {
     slut: "sl*t"
 };
 
-export default function censor(content: string) {
+export default function censor(content: string): string {
     for (const key in dictionary) {
         content = content.replace(new RegExp(key, "gi"), match => {
             const replacement = dictionary[key];
@@ -25,4 +25,5 @@ export default function censor(content: string) {
             return replacement;
         });
     }
+    return content;
 }
