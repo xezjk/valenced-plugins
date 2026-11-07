@@ -5,11 +5,11 @@
   "plugins": {
     "com.xezjk.animal-commands": {
       "name": "Animal Commands",
-      "description": "Adds multiple animals random images commands",
+      "description": "Adds multiple animals random images commands.",
       "author": "Xezjk <985520795126206464>",
       "icon": "BlueskyNeutralIcon",
       "channels": {
-        "latest": "1.1.5.2"
+        "latest": "1.1.6"
       },
       "versions": {
         "1.0.0": {
@@ -193,6 +193,19 @@
               "version": "*"
             }
           }
+        },
+        "1.1.6": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.animal-commands@1.1.6.zip",
+          "sha256": "7fc3df5d334d2e09bc80fec7c1ae1e96607a681d5846c028c1c2c4bdbc85fdfd",
+          "size": 4568,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
         }
       }
     },
@@ -202,13 +215,26 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "TextIcon",
       "channels": {
-        "latest": "1.0.0"
+        "latest": "1.0.1"
       },
       "versions": {
         "1.0.0": {
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.0.zip",
           "sha256": "89413490c29b5bc8dbf798953708fe903c3b839aa18acc304ca471726c52fa5a",
           "size": 800,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.1": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.1.zip",
+          "sha256": "52f780d6e5799295e2d11431f34800b64315bc984eefb24a5eab81fdb254745f",
+          "size": 876,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
