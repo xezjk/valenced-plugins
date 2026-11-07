@@ -195,6 +195,30 @@
           }
         }
       }
+    },
+    "com.xezjk.leave-that-out": {
+      "name": "Leave That Out!",
+      "description": "Automatically censors swears in messages whilst you send them.",
+      "author": "Xezjk <985520795126206464>",
+      "icon": "TextIcon",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.0.zip",
+          "sha256": "89413490c29b5bc8dbf798953708fe903c3b839aa18acc304ca471726c52fa5a",
+          "size": 800,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
     }
   }
 }
