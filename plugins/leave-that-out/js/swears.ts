@@ -1,4 +1,4 @@
-export default swears: Record<string, string> = {
+export default {
     fuck: "f*ck",
     shit: "sh*t",
     nigger: "n**ger",
