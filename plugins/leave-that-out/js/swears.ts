@@ -1,4 +1,4 @@
-export default const swears: Record<string, string> = {
+export default swears: Record<string, string> = {
     fuck: "f*ck",
     shit: "sh*t",
     nigger: "n**ger",
