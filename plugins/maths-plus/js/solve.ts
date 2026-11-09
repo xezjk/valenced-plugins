@@ -304,11 +304,11 @@ function solveExpression(expression: string): number {
 }
 
 export default function solve(content: string): string {
-    if (/<<.*?>>/.test(content)) {
-        const expression = message.match(/<<(.*?)>>/);
-        const solution = solveExpression(expression)
-        return content.replace(/<<.*?>>/g, solution);
-    }
-
-    return content;
+    return content.replace(/<<(.*?)>>/g, (match, expression: string) => {
+        try {
+            return String(solveExpression(expression));
+        } catch {
+            return match;
+        }
+    });
 }

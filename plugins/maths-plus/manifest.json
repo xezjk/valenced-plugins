@@ -5,7 +5,7 @@
 	"description": "Solves Mathematical expressions wrapped in 4 brackets. Example: <<1+1>>",
 	"author": "Xezjk <985520795126206464>",
 	"icon": "StaffBadgeIcon", 
-    "version": "1.0.0",
+    "version": "1.0.1",
 	"dependencies": {
 		"valenced.api": {
 			"version": ">=1 <2"

@@ -2,7 +2,6 @@ export default {
     anus: "an\\*s",
     arse: "a\\*se",
     arsehole: "a\\*seho\\*e",
-    class: "class", // just to prevent cla*s 
     ass: "a\\*s",
     assbag: "a\\*sb\\*g",
     assbandit: "a\\*sb\\*ndit",
