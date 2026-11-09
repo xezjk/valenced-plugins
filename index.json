@@ -215,7 +215,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "TextIcon",
       "channels": {
-        "latest": "1.0.7"
+        "latest": "1.0.8"
       },
       "versions": {
         "1.0.0": {
@@ -313,6 +313,43 @@
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.7.zip",
           "sha256": "d1808b1e2ecc0280f0b598d6131621aed97bd842c0e748a673cc8123a79a1f63",
           "size": 3299,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.8": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.8.zip",
+          "sha256": "35c307313d7feb766be249e50768ef9cd47e14b958f323350c6fc01ded4bd30d",
+          "size": 3308,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        }
+      }
+    },
+    "com.xezjk.maths-plus": {
+      "name": "Maths+",
+      "description": "Solves Mathematical expressions wrapped in 4 brackets. Example: <<1+1>>",
+      "author": "Xezjk <985520795126206464>",
+      "icon": "StaffBadgeIcon",
+      "channels": {
+        "latest": "1.0.0"
+      },
+      "versions": {
+        "1.0.0": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.maths-plus@1.0.0.zip",
+          "sha256": "83687b015124ee749112077e2631dc80920dcc83236838ed89f91e338ca18cfb",
+          "size": 2055,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
