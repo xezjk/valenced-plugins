@@ -356,7 +356,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "StaffBadgeIcon",
       "channels": {
-        "latest": "1.0.1"
+        "latest": "1.0.2"
       },
       "versions": {
         "1.0.0": {
@@ -376,6 +376,19 @@
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.maths-plus@1.0.1.zip",
           "sha256": "34f863d6ec69bb9a67afaae97240f1639b2ba900c10944d189131d52cccd7e03",
           "size": 2053,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.2": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.maths-plus@1.0.2.zip",
+          "sha256": "ddc91cf8f3547e1ce61e2ba6e1c248d47839741142df7c95d53cf30efd3c619c",
+          "size": 2140,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
