@@ -215,7 +215,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "TextIcon",
       "channels": {
-        "latest": "1.0.8"
+        "latest": "1.0.9"
       },
       "versions": {
         "1.0.0": {
@@ -334,6 +334,19 @@
               "version": "*"
             }
           }
+        },
+        "1.0.9": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.0.9.zip",
+          "sha256": "e691242f0c2044715e98f5b0e16aa9b04389c3c84ca7a0be3146ee4240a59f0d",
+          "size": 3298,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
         }
       }
     },
@@ -343,13 +356,26 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "StaffBadgeIcon",
       "channels": {
-        "latest": "1.0.0"
+        "latest": "1.0.1"
       },
       "versions": {
         "1.0.0": {
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.maths-plus@1.0.0.zip",
           "sha256": "83687b015124ee749112077e2631dc80920dcc83236838ed89f91e338ca18cfb",
           "size": 2055,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.0.1": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.maths-plus@1.0.1.zip",
+          "sha256": "34f863d6ec69bb9a67afaae97240f1639b2ba900c10944d189131d52cccd7e03",
+          "size": 2053,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
