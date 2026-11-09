@@ -2,6 +2,7 @@ export default {
     anus: "an\\*s",
     arse: "a\\*se",
     arsehole: "a\\*seho\\*e",
+    class: "class", // just to prevent cla*s 
     ass: "a\\*s",
     assbag: "a\\*sb\\*g",
     assbandit: "a\\*sb\\*ndit",
@@ -205,7 +206,6 @@ export default {
     guido: "gu\\*do",
     handjob: "h\\*ndj\\*b",
     heeb: "h\\*\\*b",
-    hell: "h\\*ll",
     hoe: "h\\*e",
     homo: "h\\*mo",
     homodumbshit: "h\\*mod\\*mbsh\\*t",
@@ -214,6 +214,7 @@ export default {
     jackass: "j\\*cka\\*s",
     jagoff: "j\\*g\\*ff",
     jap: "j\\*p",
+    jerk: "j\\*rk",
     jerkass: "j\\*rka\\*s",
     jigaboo: "j\\*g\\*b\\*\\*",
     jizz: "j\\*zz",
