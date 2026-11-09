@@ -1,4 +1,3 @@
-
 const additionSigns: string[] = ["+", "＋", "⊕"];
 const subtractionSigns: string[] = ["-", "−", "－", "–", "—"];
 const multiplicationSigns: string[] = ["x", "X", "×", "·", "⋅", "*"];
@@ -7,7 +6,6 @@ const divisionSigns: string[] = ["/", "÷", "⁄", "∕", ":"];
 const constants: Record<string, number> = {
     pi: Math.PI,
     π: Math.PI,
-    Π: Math.PI,
     e: Math.E,
     tau: Math.PI * 2,
     τ: Math.PI * 2,
@@ -18,6 +16,10 @@ const constants: Record<string, number> = {
 const functions: Record<string, (n: number) => number> = {
     sqrt: Math.sqrt,
     cbrt: Math.cbrt,
+    qdrt: n => {
+        if (n < 0) throw new Error("Invalid fourth root")
+        return Math.sqrt(Math.sqrt(n))
+    },
 
     sin: n => Math.sin(n * Math.PI / 180),
     cos: n => Math.cos(n * Math.PI / 180),
@@ -51,14 +53,14 @@ const superscripts: Record<string, string> = {
     "⁸": "8", "⁹": "9"
 };
 
-function factorial(n: number): number {
-    if (!Number.isInteger(n) || n < 0 || n > 170) {
+function factorial(n: number, step = 1): number {
+    if (!Number.isInteger(n) || n < 0 || n > 170 || step < 1) {
         throw new Error("Invalid factorial");
     }
 
     let result = 1;
 
-    for (let i = 2; i <= n; i++) {
+    for (let i = n; i > 1; i -= step) {
         result *= i;
     }
 
@@ -67,7 +69,8 @@ function factorial(n: number): number {
 
 function solveExpression(expression: string): number {
     let source = expression
-        .replace(/∛/g, "cbrt")
+        .replace(/[\[{]/g, "(")
+        .replace(/[\]}]/g, ")")
         .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, match =>
             "^" + [...match].map(char => superscripts[char]).join("")
         );
@@ -91,14 +94,13 @@ function solveExpression(expression: string): number {
     source = source.replace(/\*\*/g, "^");
 
     const tokens = source.match(
-        /(?:\d+(?:\.\d*)?|\.\d+)|[a-zA-Z]+|[πΠτ∞√^+\-*/%()!|]/g
+        /(?:\d+(?:\.\d*)?|\.\d+)|[a-zA-Z]+|[πΠτ∞√∛∜^+\-*/%()!|]/g
     );
 
     if (!tokens || source.replace(/\s/g, "") !== tokens.join("")) {
         throw new Error("Invalid expression");
     }
 
-    // Implicit multiplication
     const parsedTokens: string[] = [];
     let insideAbsolute = false;
     let previousWasClosingPipe = false;
@@ -119,6 +121,9 @@ function solveExpression(expression: string): number {
             token in constants ||
             token in functions ||
             token === "(" ||
+            token === "√" ||
+            token === "∛" ||
+            token === "∜" ||
             (token === "|" && !insideAbsolute);
 
         if (
@@ -212,8 +217,14 @@ function solveExpression(expression: string): number {
         let result = parsePrimary();
 
         while (peek() === "!") {
-            consume();
-            result = factorial(result);
+            let count = 0;
+
+            while (peek() === "!") {
+                consume();
+                count++;
+            }
+
+            result = factorial(result, count);
         }
 
         return result;
@@ -238,16 +249,22 @@ function solveExpression(expression: string): number {
             return Math.abs(value);
         }
 
-        if (token === "√") {
+        if (token === "√" || token === "∛" || token === "∜") {
             consume();
 
             const value = parseUnary();
 
-            if (value < 0) {
-                throw new Error("Invalid square root");
+            if (token === "√") {
+                if (value < 0) throw new Error("Invalid square root");
+                return Math.sqrt(value);
             }
 
-            return Math.sqrt(value);
+            if (token === "∛") {
+                return Math.cbrt(value);
+            }
+
+            if (value < 0) throw new Error("Invalid fourth root");
+            return Math.sqrt(Math.sqrt(value));
         }
 
         if (token === "(") {
