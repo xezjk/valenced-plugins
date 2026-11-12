@@ -215,7 +215,7 @@
       "author": "Xezjk <985520795126206464>",
       "icon": "TextIcon",
       "channels": {
-        "latest": "1.1.1"
+        "latest": "1.1.2"
       },
       "versions": {
         "1.0.0": {
@@ -365,6 +365,19 @@
           "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.1.1.zip",
           "sha256": "383c3c0aeecfcaa6f3ad1c03bca6cc5e84f6f3ad8463cde4fa91a461fc76852a",
           "size": 9424,
+          "dependencies": {
+            "valenced.api": {
+              "version": ">=1 <2"
+            },
+            "discord": {
+              "version": "*"
+            }
+          }
+        },
+        "1.1.2": {
+          "url": "https://xezjk.github.io/valenced-plugins/pool/com.xezjk.leave-that-out@1.1.2.zip",
+          "sha256": "853f99e17a363f7b681a4697fee0dc518fdc2d2cb2aae585162c6636b355b749",
+          "size": 9552,
           "dependencies": {
             "valenced.api": {
               "version": ">=1 <2"
