@@ -129,7 +129,7 @@ export default function censor(content: string): string {
 
         const matches = segmentWord(word, keys);
 
-        if (!matches || matches.length < 2) return word;
+        if (!matches || matches.length === 0) return word;
 
         let position = 0;
 
