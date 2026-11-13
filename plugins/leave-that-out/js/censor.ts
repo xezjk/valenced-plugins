@@ -26,8 +26,6 @@ function findMatchAt(word: string, start: number, keys: Key[]): Match[] {
         }
     }
 
-    if (matches.length) return matches;
-
     for (const key of keys) {
         const base = normalize(key);
         let end = start;
