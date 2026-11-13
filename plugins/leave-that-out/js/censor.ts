@@ -13,18 +13,9 @@ function normalize(value: string): string {
     return value.toLowerCase().replace(/(.)\1+/gu, "$1");
 }
 
+
 function findMatchAt(word: string, start: number, keys: Key[]): Match[] {
     const matches: Match[] = [];
-
-    for (const key of keys) {
-        if (word.slice(start).toLowerCase().startsWith(key.toLowerCase())) {
-            matches.push({
-                key,
-                end: start + key.length,
-                suffixLength: 0
-            });
-        }
-    }
 
     for (const key of keys) {
         const base = normalize(key);
@@ -36,13 +27,18 @@ function findMatchAt(word: string, start: number, keys: Key[]): Match[] {
             const candidate = normalize(word.slice(start, end));
 
             if (candidate === base) {
+                while (
+                    end < word.length &&
+                    word[end].toLowerCase() === word[end - 1].toLowerCase()
+                ) {
+                    end++;
+                }
+
                 matches.push({ key, end, suffixLength: 0 });
                 break;
             }
 
-            if (!base.startsWith(candidate)) continue;
-
-            if (candidate.length > base.length) break;
+            if (!base.startsWith(candidate)) break;
         }
     }
 
